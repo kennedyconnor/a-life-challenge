@@ -3,12 +3,6 @@ from models import Organism, HerbivoreOrganism
 class CarnivoreOrganism(Organism):
     def __init__(self, genome, row, col, world, generation, species):
         super().__init__(genome, row, col, world, generation, species)
-        # Set custom values for the Carnivore. 
-        # self._move_energy_expenditure = 1.5
-        # self._food_energy = 8
-        # self._base_energy_expenditure = 1.5
-        # self._food_type = HerbivoreOrganism
-        # self._reproduction_ratio = 2.5
         
     def choose_action(self):
         if self._world.herbivore_count < self._low_food_threshold:
