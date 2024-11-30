@@ -179,7 +179,7 @@ class Organism:
         return {
             "Age": self._world.get_day() - self._birthday,
             "Species": self._species.get_name(),
-            "Energy": self._energy,
+            "Energy": round(self._energy, 2),
             "Generation": self._generation,
             "Genome": self._genome.get_data()
         }
